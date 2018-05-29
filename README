@@ -10,13 +10,14 @@ Purpose: Recover a Phylogeny with Codon Pairing and Compare it to The Open Tree 
 The pipeline for both the alignment-free and parsimony-based approaches are listed.
 
 ##########################
+Alignment-free
+##########################
 
 REQUIREMENTS:
 
-See requirements in README (in 'alignment_free' directory) and README_getOTLtree
+See requirements in README (in 'alignment_free' directory) and README_getOTLtree (in 'other_scripts' directory)
 
 ##########################
-Alignment-free:
 
 Step 1:
 Move all coding sequences (CDS) in FASTA format into a directory, one for each species. 
@@ -36,7 +37,7 @@ python other_scripts/makeNewick.py -i output -o output.nwk
 
 Step 4:
 Infer the phylogeny of these species from the Open Tree of Life.
-See README_getOTLtree for more information.
+See README_getOTLtree (in 'other_scripts') for more information.
 The recommended method is:
 python other_scripts/getOTLtree.py -i output.nwk  -o OTL.nwk -e
 
@@ -50,7 +51,8 @@ and the Open Tree of Life.
 
 
 ##########################
-Parsimony:
+Parsimony
+##########################
 
 Step 1:
 Move all coding sequences (CDS) in FASTA format into a directory, one for each species. 
