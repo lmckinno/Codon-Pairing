@@ -80,6 +80,12 @@ The TNT command we use to run the TNT script is:
 ./tnt proc codonPairingTNTRunfile.tnt ;
 
 Step 5:
+Infer the phylogeny of these species from the Open Tree of Life.
+See README_getOTLtree (in 'other_scripts') for more information.
+The recommended method is:
+python other_scripts/getOTLtree.py -i output.nwk  -o OTL.nwk -e
+
+Step 6:
 Compare the recovered phylogeny using cam.py with the Open Tree of Life.
 This optional step requires the ETE toolkit (http://etetoolkit.org/download/)
 The command we use to compare the trees is:
