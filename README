@@ -54,6 +54,11 @@ and the Open Tree of Life.
 Parsimony
 ##########################
 
+REQUIREMENTS:
+
+See requirements in README_getPairing and README_getPairingMatrix (in 'parsimony' directory) and README_getOTLtree (in 'other_scripts' directory)
+
+##########################
 Step 1:
 Move all coding sequences (CDS) in FASTA format into a directory, one for each species. 
 Each fasta file should be in the format {species_name}{.gz}, with the .gz being used if the file is gzipped.

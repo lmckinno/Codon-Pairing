@@ -3,7 +3,7 @@
 Calculate Identical Codon Pairing and Co-tRNA Pairing
 getPairing.py
 Created By: Justin Miller 
-Email: justin@ke7gts.com  
+Email: jmiller@byu.edu 
 
 ##########################
 
@@ -63,7 +63,7 @@ The algorithm will use calculate the amount of identical codon pairing or co-tRN
 	footprint window of an identical codon.
 
 Example input directory:
-	See the example directory called vertebrate_mammalian.
+	See the example directory called mammals (located in the 'testFiles' directory).
 	
 By default, the species pairing data is first stored in memory and then written to the output file 
 	or standard out.
@@ -83,7 +83,7 @@ By default, the program runs using all available cores. The "-t" option may be u
 
 
 Example usage:
-python getPairing.py -id vertebrate_mammals -od vertebrate_mammalian_identical_codon_pairing -f 4
+python getPairing.py -id testFiles/mammals -od mammals_identical_codon_pairing -f 4
 python getPairing.py -i mySpecies -c
 
 Running the first of the above commands will produce an output directory with a file for each species
@@ -101,7 +101,7 @@ This algorithm is free for all academic and non-profit research purposes.
 We only ask that you please cite the following paper if you use this algorithm:
 CODON PAIRS ARE PHYLOGENETICALLY CONSERVED: Codon pairing as a novel phylogenetic character state for parsimony and alignment-free methods 
 
-For any for-profit usage, please contact Justin Miller at justin@ke7gts.com.
+For any for-profit usage, please contact Justin Miller at jmiller@byu.edu.
 
 ##########################
 
