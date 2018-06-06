@@ -60,7 +60,7 @@ The algorithm will use all the files to compare the codon pairing between orthol
 	at least 5% of these informative codons.
 
 Example input directory:
-	See the example directory called vertebrate_mammalian_pairing.
+	See the example directory called mammals_pairing.
 	
 By default, the species matrix is first stored in memory and then written to the output file 
 	or standard out.
@@ -78,10 +78,10 @@ By default, the algorithm computes the matrix using identical codon pairing. To 
 
 
 Example usage:
-python getPairingMatrix.py -id vertebrate_mammalian_identical_codon_pairing  -o vertebrate_mammalian_matrix.txt -oc vertebrate_mammalian_characters.txt
-python getPairingMatrix.py -id vertebrate_mammalian_identical_codon_pairing
-python getPairingMatrix.py -id vertebrate_mammalian_cotrna_pairing -c -o vertebrate_mammalian_cotrna_matrix.txt
-python getPairingMatrix.py -id vertebrate_mammalian_cotrna_pairing -o vertebrate_mammalian_matrix.txt -on vertebrate_mammalian_cotrna_names.txt
+python getPairingMatrix.py -id testFiles/mammals_identical_codon_pairing  -o mammals_matrix.txt -oc mammals_characters.txt
+python getPairingMatrix.py -id testFiles/mammals_identical_codon_pairing
+python getPairingMatrix.py -id testFiles/mammals_cotrna_pairing -c -o mammals_cotrna_matrix.txt
+python getPairingMatrix.py -id testFiles/mammals_cotrna_pairing -o mammals_matrix.txt -on mammals_cotrna_names.txt
 
 Running the first of the above commands will produce an output file for the species matrix as well as an output file containing
 	the codons used in the matrix.
