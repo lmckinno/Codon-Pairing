@@ -96,7 +96,8 @@ This optional step requires the ETE toolkit (http://etetoolkit.org/download/)
 The command we use to compare the trees is:
 ete3 compare -t output.nwk -r OTL.nwk --unrooted
 The columns with -br+ show the percent similarity between the recovered phylogeny
-and the Open Tree of Life.
+and the Open Tree of Life. For clades that recovered multiple maximum parsimony trees, we find the mean 
+comparison of all the trees. Further instructions can be found in 'parsimony/comparisons' directory.
 
 ##########################
 
