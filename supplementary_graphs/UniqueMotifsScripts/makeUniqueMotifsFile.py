@@ -27,11 +27,8 @@ uniqueMotifs = 0
 repeatedMotifs = 0
 for entry in motifToSpecies:
 	if len(motifToSpecies[entry]) > 1:
-#		print "Motif is in " + str(len(motifToSpecies[entry])) + " species"
-		outFile.write("Overlaps\n")
 		repeatedMotifs += 1
 	else:
-		outFile.write("Unique\n")
 		uniqueMotifs += 1
 
 outFile.write("Unique Motifs: "+ str(uniqueMotifs) + "\n")
