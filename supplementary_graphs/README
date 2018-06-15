@@ -50,11 +50,14 @@ python makeCodonPairingInputFile.py ../mammals mammals_codonFreq.txt
 
 Step 2:
 Create the graph using freqCodonPairing_rscript.R
-The user may edit this file to specify the path to the input file, the path to the output file, and the title of the 
-graph to be created. The lines that must be modified are indicated with comments in the script. This program should
-then be ran by using R studio. The following command shows how to run this script.
+This program showed be run using 3 arguments:
+1 - The path to the input file
+2 - The path to the output file
+3 - The name of the clade (which will be used in the title)
 
-Rstudio freqCodonPairing_rscript.R
+The following command shows how to run this script.
+
+Rstudio freqCodonPairing_rscript.R mammals_codonFreq.txt mammals_codonFreq.png Mammals
 
 ########################
 
@@ -73,11 +76,14 @@ python makeNumCodonsInputFile.py ../mammals mammals_numCodons.txt
 
 Step 2:
 Create the graph using numCodonPairs_rscript.R
-The user may edit this file to specify the path to the input file, the path to the output file, and the title of the 
-graph to be created. The lines that must be modified are indicated with comments in the script. This program should
-then be ran by using R studio. The following command shows how to run this script.
+This program showed be run using 3 arguments:
+1 - The path to the input file
+2 - The path to the output file
+3 - The name of the clade (which will be used in the title)
 
-Rstudio numCodonPairs_rscript.R
+The following command shows how to run this script.
+
+Rstudio numCodonPairs_rscript.R mammals_numCodons.txt mammals_numCodons.png Mammals
 
 ########################
 
@@ -94,13 +100,15 @@ to be created as the second argument. The following command shows an example of 
 python makeRepeatedMotifsFile.py ../mammals mammals_repeatedMotifs.txt
 
 Step 2:
-
 Create the graph using repeatedMotifs_rscript.R
-The user may edit this file to specify the path to the input file, the path to the output file, and the title of the graph 
-to be created. The lines that must be modified are indicated with comments in the script. This program
-should then be ran by using R studio. The following command shows how to run this script.
+This program showed be run using 3 arguments:
+1 - The path to the input file
+2 - The path to the output file
+3 - The name of the clade (which will be used in the title)
 
-Rstudio repeatedMotifs_rscript.R
+The following command shows how to run this script.
+
+Rstudio repeatedMotifs_rscript.R mammals_repeatedMotifs.txt mammals_repeatedMotifs.png Mammals
 
 ########################
 
