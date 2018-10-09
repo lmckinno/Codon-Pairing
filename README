@@ -56,7 +56,7 @@ Parsimony
 
 REQUIREMENTS:
 
-See requirements in README_getPairing and README_getPairingMatrix (in 'parsimony' directory) and README_getOTLtree (in 'other_scripts' directory)
+See requirements in README_parsimony_pairing (in 'parsimony' directory) and README_getOTLtree (in 'other_scripts' directory)
 
 ##########################
 Step 1:
@@ -65,32 +65,25 @@ Each fasta file should be in the format {species_name}{.gz}, with the .gz being 
 An example of a directory with correctly formatted CDS files is in the test/mammals/ directory.
 
 Step 2:
-Calculate the pairing for each species by using getPairing.py (in 'parsimony' directory).
-Examples of possible ways to do this are in the README_getPairing file (in 'parsimony' directory).
+Create a character matrix of parsimony informative codons pairs using parsimony_pairing.py in 'parsimony' directory).
+Examples of possible ways to do this are in the README_parsimony_pairing file (in 'parsimony' directory).
 The recommended method is:
-python parsimony/getPairing.py -id testFiles/mammals/ -od output
+python parsimony/parsimony_pairing -id testFiles/mammals/ -o mammals_matrix.txt -oc mammals_characters.txt
 
 Step 3:
-Create a character matrix using getPairingMatrix.py in 'parsimony' directory).
-Use the output directory from Step 2 as the input for this program.
-Examples of possible ways to do this are in the README-getPairingMatrix file (in 'parsimony' directory).
-The recommended method is:
-python parsimony/getPairingMatrix.py -id mammals_pairing_output -o mammals_matrix -oc mammals_characters
-
-Step 4:
-Recover a phylogeny using the character matrix created in Step 3.
+Recover a phylogeny using the character matrix created in Step 2.
 We provide a Tree Analysis Using New Technology (TNT) script to do this, codonPairingTNTRunfile.tnt (in 'parsimony' directory).
 This step requires TNT (http://www.zmuc.dk/public/phylogeny/tnt/)
 The TNT command we use to run the TNT script is:
 ./tnt proc codonPairingTNTRunfile.tnt ;
 
-Step 5:
+Step 4:
 Infer the phylogeny of these species from the Open Tree of Life.
 See README_getOTLtree (in 'other_scripts') for more information.
 The recommended method is:
 python other_scripts/getOTLtree.py -i output.nwk  -o OTL.nwk -e
 
-Step 6:
+Step 5:
 Compare the recovered phylogeny using cam.py with the Open Tree of Life.
 This optional step requires the ETE toolkit (http://etetoolkit.org/download/)
 The command we use to compare the trees is:
