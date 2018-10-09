@@ -29,7 +29,7 @@ ARGUMENT OPTIONS:
 
 REQUIREMENTS:
 
-parsimony_pairingMatrix.py uses Python version 3.6
+parsimony_pairingMatrix.py uses Python version 3.5
 
 Python libraries that must be installed include:
 1. sys
@@ -39,7 +39,7 @@ Python libraries that must be installed include:
 4. Process, current_process, freeze_support, and Pool from multiprocessing
 
 If any of those libraries is not currently in your Python Path, use the following command:
-pip install --user [library_name]
+pip3 install --user [library_name]
 to install the library to your path.
 
 ##########################
